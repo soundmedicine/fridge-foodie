@@ -13,7 +13,7 @@ function submission(event) {
 }
 
 function getRecipes(ingredient) {
-    const BASE_URL = 'http://galvanize-cors.herokuapp.com/http://www.recipepuppy.com/api/?i=' + ingredient
+    const BASE_URL = 'https://galvanize-cors.herokuapp.com/http://www.recipepuppy.com/api/?i=' + ingredient
 
 fetch(BASE_URL)
     .then(function(response) {
