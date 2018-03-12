@@ -1,0 +1,78 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 2em;
+    width: 100%;
+    margin: 0 auto;
+    column-count: 2;
+    column-width: 40%;
+
+  }
+
+  input, button, p, div, section, article, select {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1em;
+    margin: 0.5em;
+  }
+  
+  h1 {
+      text-shadow: 5px 5px skyblue;
+      font-size: 80px;
+  }
+
+  label {
+      text-shadow: 5px 5px yellow;
+      font-size: 70px;
+  }
+
+  p {
+      text-shadow: 1px 1px rgb(110, 189, 110);
+  }
+
+  small {
+      font-size: 20px;
+  }
+
+  input {
+      width: 100%;
+  }
+
+  button {
+      font-family: 'Gloria Hallelujah', cursive;
+      background: hotpink;
+      text-shadow: 2px 2px silver;
+      width: 100%;
+      radius: 25px;
+  }
+
+  .button {
+      text-shadow: 10px;
+  }
+
+.recipes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    margin: 10px;
+
+}
+
+.includes {
+    font-size: 15px;
+}
+
+.takeMe {
+    font-size: 20px;
+}
