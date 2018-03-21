@@ -15,9 +15,9 @@ function submission(event) {
 function getRecipes(ingredient) {
     const BASE_URL = 'https://galvanize-cors.herokuapp.com/http://www.recipepuppy.com/api/?i=' + ingredient
 
-fetch(BASE_URL)
+fetch(BASE_URL) 
     .then(function(response) {
-        return response.json();
+        return response.json()
     })
     .then(function(data) {
         let recipeList = data.results
@@ -26,20 +26,6 @@ fetch(BASE_URL)
             let label = document.querySelector('label')
             label.textContent = "What's in your fridge?"
             recipeList.forEach(function(recipe) {
-                // recipes.outerHTML =
-                // ` <div class="card">
-                //     <div class="card-image">
-                //         <img src="${recipe.thumbnail}">
-                //         <span class="card-title">${recipe.title}</span>
-                //     </div>
-                //     <div class="card-content">
-                //         <p>This recipe includes ${ingredient}.</p>
-                //     </div>
-                //     <div class="card-action">
-                //         <a href="${recipe.href}">Take me to this recipe!</a>
-                //         </div>
-                //     </div>`
-                
                 let cardDiv = document.createElement('div')
                 cardDiv.setAttribute('class', 'card')
                 cardDiv.textContent = recipe.title
@@ -71,13 +57,22 @@ fetch(BASE_URL)
                 input.value = ''
         })
     } else {
-        let label = document.querySelector('label')
-        label.textContent = 'Who cooks with that? Try again, Julia Childs.'
-    }
+            fetch("error.json")
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(data) {
+                let message = data[parseInt(Math.random(4))].message
+                console.log(message)
+                let label = document.querySelector('label')
+                label.textContent = message
+            })
+        }
     })
     .catch(function(err) {
         console.log(err.message);
-    });
+    })
+
 }
 
 
